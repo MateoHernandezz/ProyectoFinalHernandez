@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preentrega3</title>
+</head>
+
+<body>
+    <h1>Registro de Alumno</h1>
+    <form id="studentForm">
+        <label for="nombre">Nombre del Alumno:</label>
+        <input type="text" id="nombre" required><br><br>
+
+        <label for="nota1">Primera Nota:</label>
+        <input type="number" id="nota1" required><br><br>
+
+        <label for="nota2">Segunda Nota:</label>
+        <input type="number" id="nota2" required><br><br>
+
+        <button type="button" onclick="registrarAlumno()">Registrar Alumno</button>
+    </form>
+
+    <h2>Registro de Alumnos</h2>
+    <ul id="alumnos"></ul>
+
+    <h2>Promedio de Notas</h2>
+    <p id="promedio"></p>
+
+    <label for="filtroNota">Filtrar por nota:</label>
+    <select id="filtroNota" onchange="filtrarPorNota()">
+        <option value="ambas">Ambas notas</option>
+        <option value="nota1">Nota 1</option>
+        <option value="nota2">Nota 2</option>
+    </select>
+
+    <label for="nombreBusqueda">Buscar alumno por nombre:</label>
+    <input type="text" id="nombreBusqueda" onkeyup="buscarAlumno()"><br><br>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
